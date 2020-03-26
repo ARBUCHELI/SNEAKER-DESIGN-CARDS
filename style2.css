@@ -1,81 +1,82 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*Used to import Montserrat Google fonts*/
 body {
 	width: 100%;
 	height: 100vh;
-	overflow: hidden;
-	background-color: #111e2a;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: 'Montserrat', sans-serif;
+	overflow: hidden; /*The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.*/
+	/*overflow: hidden (The overflow is clipped, and the rest of the content will be visible)*/
+	background-color: #111e2a; /*Background color behind the cards*/
+	display: flex; /*A flex container becomes flexible*/
+	align-items: center; /*To position the cards in the center*/
+	justify-content: center; /*To justify content*/
+	font-family: 'Montserrat', sans-serif; /*Type of letter of the content*/
 }
-.shoesdesign,
+.shoesdesign, /*Selection of the two cards*/
 .shoesdesign2{
 	width: 340px;
 	height: 550px;
-	background-color: #fff;
-	border-radius: 30px;
-	position: absolute;
+	background-color: #fff; /*Background color of the cards*/
+	border-radius: 30px; /*Rounding the border of the cards*/
+	position: absolute; /*An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
 	left: 20%;
 	overflow: hidden;
-	z-index: 0;
+	z-index: 0; /*Specifies the stack order of an element*/
 	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
-	transition: .5s;
+	transition: .5s; /*The animation when the page is loaded for first time*/
 }
 .shoesdesign:hover{
-	margin-top: -30px;
+	margin-top: -30px; /*Moves the first card 30 px up when hovering with the mouse*/
 	box-shadow: 0 30px 50px black;
 }
-.shoesdesign2:hover{
+.shoesdesign2:hover{ /*Moves the second card 30 px down when hovering with the mouse*/
 	margin-top: 30px;
 	box-shadow: 0 -30px 50px black;
 }
 .shoesdesign2{
-	left: 50%;
+	left: 50%; /*Distance create at the left of the second card*/
 }
-.shoesdesign:before,
+.shoesdesign:before, /*In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.*/
 .shoesdesign2:before{
-	content: '';
+	content: ''; /*Inserts content (space)*/
 	position: absolute;
-	top: -25%;
+	top: -25%; /*Height of the background color inside of the card (orange and pink)*/
 	left: 0;
 	width: 100%;
 	height: 90%;
-	background: linear-gradient(160deg, #e72b3b, #d5710b);
+	background: linear-gradient(160deg, #e72b3b, #d5710b); /*Color degradation of background from initial color to final*/
 	border-top-left-radius: 30px;
 	border-top-right-radius: 30px;
-	transform: skewY(-10deg);
+	transform: skewY(-10deg); /*Turn the background ten degrees clockwise*/
 	z-index: -1;
 }
 .shoesdesign2:before{
-	background: linear-gradient(160deg, #ed4491 50%, #dec7c2);
+	background: linear-gradient(160deg, #ed4491 50%, #dec7c2); /*Color degradation of background from initial color to final*/
 }
-.shoesdesign:after,
+.shoesdesign:after, /*In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.*/
 .shoesdesign2:after{
-	content: 'Nike';
+	content: 'Nike'; /*The word Nike appears in the card*/
 	position: absolute;
 	bottom: 30%;
 	left: -7%;
 	transform: skewY(-10deg);
 	font-size: 10.5rem;
 	font-weight: bolder;
-	color: #cb5614;
+	color: #cb5614; /*Bage Color of the text*/
 	margin: 0;
 	padding: 0;
 	z-index: -1;
 }
 .shoesdesign2:after{
-	content: 'Boost';
+	content: 'Boost'; /*The word Boost appars in the card*/
 	font-size: 8rem;
-	color: #d86196;
+	color: #d86196; /*Pink color of the text*/
 }
 .nike,
 .adidas{
-	position: relative;
+	position: relative; /*An element with position: relative; is positioned relative to its normal position. Used to move vertically the cards*/
 	width: 100%;
 	height: 100%;
 }
-.adidas:before,
+.adidas:before, /*Design of the adidas card*/
 .adidas:after{
 	content: '';
 	position: absolute;
@@ -85,8 +86,9 @@ body {
 	top: 0;
 	left: 45%;
 	z-index: -1;
-	opacity: 0.18;
+	opacity: 0.18; /*Controls transparency*/
 }
+/*Configuration of the logo*/
 .adidas:before{
 	left: 55%;
 }
@@ -102,41 +104,42 @@ body {
 	width: 100%;
 	color: white;
 }
+/*Configuration of the hamburger menu*/
 .hamburger{
 	width: 40px;
 	height: 40px;
 	background-color: white;
-	border-radius: 50%;
+	border-radius: 50%; /*Circle that holds the hamburguer menu*/
 	position: absolute;
 	top: 2%;
 	right: 8%;
 }
-.hamburger span:nth-child(1),
+.hamburger span:nth-child(1), /*To create three lines for the menu hamburger*/
 .hamburger span:nth-child(2),
 .hamburger span:nth-child(3){
-	width: 45%;
+	width: 45%; /*Lenght of the lines*/
 	position: absolute;
 	left: 27%;
 	top: 37%;
 	height: 2px;
-	background-color: #de4e23;
+	background-color: #de4e23; /*Color of the lines*/
 	text-align: center;
 	border-radius: 15px;
 }
 .hamburger span:nth-child(2){
-	top: 62%;
+	top: 62%; /*Distance of the lines*/
 }
 .hamburger span:nth-child(3){
-	top: 49%;
+	top: 49%; /*Distance of the lines*/
 }
 .text,
-.text2{
+.text2{ /*Configuration of the slogans*/
 	margin-left: 10px;
 	margin-top: 15px;
 	z-index: 10;
 }
 .text p,
-.text2 p{
+.text2 p{ /*Configuration of the slogans*/
 	font-size: 74px;
 	font-weight: bolder;
 	line-height: 60px;
@@ -144,7 +147,7 @@ body {
 	color: white;
 	margin: 0;
 }
-.text2 p{
+.text2 p{ /*Configuration of the slogans*/
 	font-size: 36px;
 	line-height: 28px;
 	text-align: center;
@@ -152,7 +155,7 @@ body {
 	margin-bottom: 100px;
 }
 .nike-shoes,
-.adidas-shoes{
+.adidas-shoes{ /*Configuration of position of the slogans*/
 	z-index: 1;
 	position: relative;
 	width: 100%;
@@ -164,26 +167,27 @@ body {
 	top: -10%;
 	left: -7%;
 	width: 100%;
-	transform: rotate(-32deg);
+	transform: rotate(-32deg); /*Turn the shoes images 32 degrees clockwise*/
 }
-.adidas-shoes img{
+.adidas-shoes img{ /*Configuration of the adidas image*/
 	top: -65%;
 	width: 110%;
 	left: -20%;
 }
-.nike-shoes img{
+.nike-shoes img{ /*Configuration of the nike image*/
 	width: 160%;
 	left: -38%;
 	top: -20%;
 }
 .price,
-.price2{
+.price2{ /*Configuration of the prices*/
 	position: absolute;
 	bottom: 20%;
 	right: 3%;
-	line-height: 24px;
+	line-height: 24px; /*Distance between the two prices*/
 	z-index: 3;
 }
+/*Configuration of the prices*/
 .price h3, 
 .price2 h3{
 	margin: 0;
@@ -212,8 +216,8 @@ body {
 .button2 a{
 	position: absolute;
 	bottom: 45px;
-	background: linear-gradient(to right, #e72b3b, #d5710b 80%);
-	color: white;
+	background: linear-gradient(to right, #e72b3b, #d5710b 80%); /*Degradation of the color of the buttons*/
+	color: white; /*Color of the text inside the button*/
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 10px 10px;
@@ -227,7 +231,7 @@ body {
 }
 
 .button2 a{
-	background: linear-gradient(to right, #dc3273, #fa2060 80%);
+	background: linear-gradient(to right, #dc3273, #fa2060 80%); /*Degradation of the color of the buttons*/
 	bottom: 47px;
 }
 .button:hover a,
@@ -235,7 +239,7 @@ body {
 	padding: 10px 21px;
 }
 .mens,
-.mens2{
+.mens2{ /*Configuration of the final banner*/
 	position: absolute;
 	bottom: -1.3%;
 	text-align: center;
