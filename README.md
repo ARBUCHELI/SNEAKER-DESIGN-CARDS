@@ -15,4 +15,4 @@ The web application consists of two design cards that can be implemented at a co
 3. Click the "ADD TO CARD" button, to see a special effect used to attrack the attention of possible customers.
 
 
-Author: Andrés R. Bucheli.
+# Author: Andrés R. Bucheli.
